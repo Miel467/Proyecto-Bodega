@@ -1,0 +1,138 @@
+:root{
+   --black:#090205;
+    --dark:#270016;
+    --wine:#51111f;
+    --red-wine:#922235;
+    --gold:#d8b36a;
+}
+
+.hero{
+    margin-top: 20px;
+    position:relative;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(146,34,53,.35),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #090205,
+    #270016,
+    #090205
+    );
+}
+
+.hero::before{
+    content:'';
+
+    position:absolute;
+
+    width:600px;
+    height:600px;
+
+    background:#922235;
+
+    filter:blur(250px);
+
+    opacity:.15;
+
+    top:-200px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to bottom,
+    rgba(0,0,0,.1),
+    rgba(0,0,0,.5)
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+
+    max-width:800px;
+
+    padding:20px;
+}
+
+
+
+.hero h1{
+    color:white;
+
+    font-size:5rem;
+
+    font-family:Georgia, serif;
+
+    margin:20px 0;
+}
+
+
+
+.sectio2{
+ width: 100%;
+    padding: 100px 8%;
+    background: #fff;
+}
+
+.vinos{
+text-align: center;
+    margin-bottom: 50px;
+}
+.vinos h2{
+     font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 6px;
+    color: #222;
+    margin-bottom: 10px;
+}
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+.categorias button {
+    padding: 12px 22px;
+    border: none;
+    background: #f4f4f4;
+    color: #222;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 3px;
+}
+.categorias button:hover {
+    background: #202020;
+    color: white;
+}
+
+.categorias button.active {
+    background: #202020;
+    color: white;
+}
+
+
+
