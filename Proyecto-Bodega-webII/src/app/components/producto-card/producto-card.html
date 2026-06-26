@@ -1,0 +1,21 @@
+<div class="card">
+
+    <img
+        [src]="producto.imagen"
+        [alt]="producto.nombre">
+
+    <div class="card-body">
+
+        <h2>{{ producto.nombre }}</h2>
+
+        <p>{{ producto.descripcion }}</p>
+
+        <h3>${{ producto.precio }}</h3>
+
+        <button (click)="seleccionar()">
+            Ver producto
+        </button>
+
+    </div>
+
+</div>

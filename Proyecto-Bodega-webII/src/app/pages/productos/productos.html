@@ -1,0 +1,25 @@
+
+@if (productos.length > 0) {
+
+<div class="row">
+
+  @for (producto of productos; track producto.id) {
+
+    <div class="col-md-4 mb-4">
+
+      <app-producto-card
+      [producto]="producto"
+        (favorito)="onFavorito($event)">
+      </app-producto-card>
+
+    </div>
+
+  }
+
+</div>
+
+} @else {
+
+<p>No hay productos disponibles.</p>
+
+}
