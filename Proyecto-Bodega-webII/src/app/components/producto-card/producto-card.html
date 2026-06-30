@@ -1,0 +1,25 @@
+<div class="card-vino"
+>
+
+
+  <img [src]="producto.imagen" [alt]="producto.nombre">
+
+  <div class="overlay">
+
+    <h3>{{producto.nombre}}</h3>
+
+    <p>{{producto.descripcion}}</p>
+
+    <h4>${{producto.precio}}</h4>
+
+   <a
+    [routerLink]="['/vino', producto.id]"
+    class="btn-detalle">
+
+    Ver detalles →
+
+</a>
+   
+  </div>
+
+</div>

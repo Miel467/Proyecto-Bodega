@@ -1,0 +1,56 @@
+<div class="body">
+<section class="hero">
+  <img
+        [src]="imagenes[indice]"
+        class="hero-img">
+
+    <div class="overlay"></div>
+
+    <button class="prev" (click)="anterior()">
+        &#10094;
+    </button>
+
+    <button class="next" (click)="siguiente()">
+        &#10095;
+    </button>
+
+    <div class="contenido">
+
+        <h1>EL VINO ES POESÍA EMBOTELLADA.</h1>
+
+        <p>- Robert Louis Stevenson -</p>
+
+    </div>
+</section>
+
+<section class="sectio2">
+  <div class="vinos">
+     <div class="ornamento">❦</div>
+    
+    <h2>VINOS</h2>
+  
+    <p>Descubre nuestra selección</p>
+
+    <div class="divider">
+        <span></span>
+    </div>
+
+  </div>
+ 
+  <div class="categorias">
+
+    <button  [class.activo]="categoriaSeleccionada === 'Todos'"
+  (click)="filtrar('Todos')" >!!</button>
+
+    <button [class.activo]="categoriaSeleccionada==='Tinto'"(click)="filtrar('Tinto')"> TINTO</button>
+
+    <button [class.activo]="categoriaSeleccionada==='Blanco'"(click)="filtrar('Blanco')"> BLANCO</button>
+
+    <button [class.activo]="categoriaSeleccionada==='Rosado'"(click)="filtrar('Rosado')"> ROSADO</button>
+
+    <button [class.activo]="categoriaSeleccionada==='Espumante'"(click)="filtrar('Espumante')"> ESPUMANTE</button>
+  </div>
+
+ <app-productos [categoria]="categoriaSeleccionada"></app-productos>
+</section>
+</div>
