@@ -1,0 +1,71 @@
+.footer{
+    display:flex;
+    justify-content:center;
+   background: #3b010b;
+    color:white;
+    
+    padding:20px 15px;
+    text-align:center;
+   
+}
+
+.footer-content{
+     display:flex;
+     width:88%;
+    flex-direction:column;
+  padding:25px;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.footer-brand{
+    flex:2;
+}
+
+.footer-brand h2{
+    font-family: "Meie Script", cursive;
+    font-size:3.5rem;
+    font-weight:500;
+    color:#d8bd71;
+    margin-bottom:10px;
+}
+
+.footer-brand p{
+    color:#bdbdbd;
+    line-height:1.8;
+    font-size:1.1rem;
+    margin-bottom:35px;
+}
+
+.footer-links{
+    flex:1;
+    display:flex;
+    gap:30px;
+}
+
+.footer-links a{
+    color:#d8bd71;
+    font-size:1.5rem;
+    transition:.3s;
+    
+}
+
+.footer-links a:hover{
+    color:#d8bd71;
+}
+
+.footer-bottom{
+    width:60%;
+    margin-top:10px;
+    border-top:1px solid rgba(216,179,106,.2);
+    text-align:center;
+    padding:10px;
+}
+
+.footer-bottom p{
+
+    margin-top:10px;
+    color:#888;
+    font-size:.9rem;
+}

@@ -1,0 +1,37 @@
+<section class="sucursales">
+
+    <p>
+        Encontrá la sucursal más cercana y disfrutá de nuestros mejores vinos.
+    </p>
+
+    <div class="contenedor">
+
+        @for (sucursal of sucursales; track sucursal.ciudad) {
+
+        <div class="card">
+
+            <img [src]="sucursal.imagen">
+
+            <div class="info">
+
+                <h3>{{ sucursal.ciudad }}</h3>
+
+                <p><strong>Dirección:</strong> {{ sucursal.direccion }}</p>
+
+                <p><strong>Teléfono:</strong> {{ sucursal.telefono }}</p>
+
+                <div class="boton">
+
+                <a [href]="sucursal.mapa" target="_blank">
+                    Ver ubicación
+                </a>
+</div>
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</section>
