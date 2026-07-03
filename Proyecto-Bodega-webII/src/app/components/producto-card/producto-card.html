@@ -1,0 +1,28 @@
+<div class="card-vino"
+>
+
+  <img [src]="producto.imagen" [alt]="producto.nombre">
+
+  <div class="overlay">
+
+    <h3>{{producto.nombre}}</h3>
+
+    <p>{{producto.descripcion}}</p>
+
+    <h4>${{producto.precio}}</h4>
+
+    <div class="btns">
+   <a
+    [routerLink]="['/vino', producto.id]"
+    class="btn-detalle">
+
+    Ver detalles →
+
+</a>
+   <button class="favorite-btn rounded-circle d-flex align-items-center justify-content-center"
+  style="width: 45px; height: 45px;" (click)="toggle()">
+      {{ esFavorito ? '★' : '☆' }}
+    </button>
+  </div>
+</div>
+</div>

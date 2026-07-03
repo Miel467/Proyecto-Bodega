@@ -1,0 +1,75 @@
+@if (favoritos.length > 0) {
+
+<div class="container mt-4">
+  <div class="row g-4 justify-content-center">
+
+    @for (fav of favoritos; track fav.id) {
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-10">
+
+      <div class="card-vino">
+
+        <button
+          class="favorite-btn"
+          (click)="toggleFavorito(fav)">
+
+          {{ esFavorito(fav) ? '★' : '☆' }}
+
+        </button>
+
+        <img
+          [src]="fav.imagen"
+          [alt]="fav.nombre">
+
+        <div class="info">
+
+          <h5>{{ fav.nombre }}</h5>
+
+          <span class="precio">
+            ${{ fav.precio }}
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    }
+
+  </div>
+</div>
+
+} @else {
+
+<div class="text-center mt-2">
+  <i class="bi bi-star fs-3 text-secondary"></i>
+  <h4>No tienes favoritos aún.</h4>
+</div>
+
+}
+
+<!-- Productos -->
+
+@if(productos.length > 0){
+
+<div class="row">
+  @for (producto of productosFiltrados; track producto.id) {
+
+  <div class="col-md-4 mb-4">
+    <app-producto-card
+      [producto]="producto"
+      [esFavorito]="esFavorito(producto)"
+      (toggleFavorito)="toggleFavorito($event)"
+    >
+    </app-producto-card>
+  </div>
+
+  }
+</div>
+
+}@else{
+
+<p>No hay productos disponibles.</p>
+
+}

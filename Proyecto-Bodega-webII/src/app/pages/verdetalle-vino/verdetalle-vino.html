@@ -1,0 +1,74 @@
+<section class="fondo">
+  @if (vino) {
+    <div class="detalle">
+      <div class="imagen">
+        <img
+          [src]="
+            vino.id === 1 ? 'https://www.bodegamalma.com/wp-content/uploads/2015/08/MalmaUniversoMalbec-527x1024-1.jpg' :
+            vino.id === 3 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkxG3ARsNV3PWpMQIao_25ws03zfN_Msh1rg0GHXKpCA&s=10' :
+            vino.id === 4 ? 'https://www.bodegamalma.com/wp-content/uploads/2015/09/Malma-FLP-Merlot-527x1024.jpg' :
+            vino.id === 5 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK3A5kNQVDmSqvIZ-GFztP8X_faAg8WF-yhCWXnECWcw&s=10' :
+            vino.id === 6 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_j2FjnvfJCzHT2YwCH3bjjEAJrh1HBm0IUeaEreDEGQ&s=10' :
+            vino.id === 7 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwWzu7S05YUetPRrR5h3cfW7NRZ-Fi5LVjOgEdlzgnAtW3t275x-8u8_o&s=10' :
+            vino.id === 9 ? 'https://http2.mlstatic.com/D_NQ_NP_630413-MLA90963336632_082025-O.webp' :
+            vino.id === 10 ? 'https://http2.mlstatic.com/D_NQ_NP_761588-MLA73646833379_122023-O.webp' :
+            vino.id === 11 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe_sG3fFA4TFLqTX6W9JuiO9bO2RTxuV3wIoY-ELQrPw&s=10' :
+            vino.id === 12 ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWuTSH7ewpQOPXnN7KxcqHcgrQk-jEy95evbf_vJHq_A&s' :
+            vino.imagen
+          "
+          [alt]="vino.nombre"
+        />
+
+      </div>
+
+      <div class="contenido">
+        <span class="categoria">{{ vino.categoria }}</span>
+
+        <h1>{{ vino.nombre }}</h1>
+
+        <p class="descripcion">{{ vino.descripcion }}</p>
+
+        <h2 class="precio">${{ vino.precio }}</h2>
+
+        <div class="linea"></div>
+
+        <div class="ficha">
+          <div class="item">
+            <h3>Origen</h3>
+            <p>{{ vino.origen }}</p>
+          </div>
+
+          <div class="item">
+            <h3>Uva</h3>
+            <p>{{ vino.uva }}</p>
+          </div>
+
+          <div class="item">
+            <h3>Alcohol</h3>
+            <p>{{ vino.alcohol }}</p>
+          </div>
+
+          <div class="item">
+            <h3>Temperatura</h3>
+            <p>{{ vino.temperatura }}</p>
+          </div>
+
+          <div class="item">
+            <h3>Maridaje</h3>
+            <p>{{ vino.maridaje }}</p>
+          </div>
+
+          <div class="item">
+            <h3>Notas de cata</h3>
+            <p>{{ vino.notas }}</p>
+          </div>
+        </div>
+
+        <a routerLink="/productos" class="btn-volver">
+          ← Volver
+        </a>
+
+      </div>
+    </div>
+  }
+</section>
